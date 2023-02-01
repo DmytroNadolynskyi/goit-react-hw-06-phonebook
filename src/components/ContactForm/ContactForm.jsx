@@ -30,7 +30,7 @@ const ContactForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Label>
-        Name
+        Contact Name
         <Input
           type="text"
           name="name"
@@ -40,7 +40,7 @@ const ContactForm = () => {
         />
       </Label>
       <Label>
-        Number
+        Phone Number
         <Input
           type="tel"
           name="number"

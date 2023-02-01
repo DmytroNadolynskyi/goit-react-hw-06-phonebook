@@ -7,7 +7,7 @@ const Filter = () => {
   const dispatch = useDispatch();
   return (
     <Label>
-      Find Contacts
+      Search Contacts
       <Input
         type="text"
         onChange={e => dispatch(filterContact(e.target.value))}
