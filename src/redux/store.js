@@ -13,8 +13,6 @@ import storage from 'redux-persist/lib/storage';
 import { contactsReducer } from './contacts/contactsSlice';
 import { filterReducer } from './filter/filterSlice';
 
-
-
 const contactsPersistConfig = {
   key: 'contacts',
   storage,
@@ -25,7 +23,7 @@ export const store = configureStore({
     contacts: persistReducer(contactsPersistConfig, contactsReducer),
     filter: filterReducer,
   },
-   middleware: getDefaultMiddleware =>
+  middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],

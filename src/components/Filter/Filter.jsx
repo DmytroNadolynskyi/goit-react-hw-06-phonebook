@@ -4,11 +4,14 @@ import { filterContact } from 'redux/filter/filterSlice';
 import { useDispatch } from 'react-redux';
 
 const Filter = () => {
-   const dispatch = useDispatch();
+  const dispatch = useDispatch();
   return (
     <Label>
-      Find Contacts 
-      <Input type="text" onChange={e => dispatch(filterContact(e.target.value))} />
+      Find Contacts
+      <Input
+        type="text"
+        onChange={e => dispatch(filterContact(e.target.value))}
+      />
     </Label>
   );
 };
@@ -17,4 +20,4 @@ const Filter = () => {
 //   filterContact: PropTypes.func.isRequired,
 // };
 
-export default Filter
+export default Filter;

@@ -12,14 +12,14 @@ const ContactForm = () => {
     event.preventDefault();
     const name = event.target.elements.name.value;
     const number = event.target.elements.number.value;
-    const findContact = contacts.find(contact => contact.name === name);
-    if (findContact) {
-      alert('Already in Contacts');
+    const searchContact = contacts.find(contact => contact.name === name);
+    if (searchContact) {
+      alert(`Contact ${name} already in list!`);
       return;
     }
-    
 
-    dispatch(addContact({
+    dispatch(
+      addContact({
         name,
         number,
         id: nanoid(),
@@ -32,7 +32,6 @@ const ContactForm = () => {
       <Label>
         Name
         <Input
-          
           type="text"
           name="name"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -43,7 +42,6 @@ const ContactForm = () => {
       <Label>
         Number
         <Input
-          
           type="tel"
           name="number"
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
