@@ -7,12 +7,12 @@ import { addContact } from 'redux/contacts/contactsSlice';
 const ContactForm = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.items);
-const normalizeValue = value => value.toLowerCase().trim();
+
   const handleSubmit = event => {
     event.preventDefault();
     const name = event.target.elements.name.value;
     const number = event.target.elements.number.value;
-    const findContact = contacts.find(contact => normalizeValue(contact.name) === normalizeValue(name));
+    const findContact = contacts.find(contact => contact.name=== name);
     if (findContact) {
       alert('Already in Contacts');
       return;

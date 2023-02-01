@@ -14,7 +14,7 @@ const Filter = () => {
 };
 
 // Filter.propTypes = {
-//   onInputChange: PropTypes.func.isRequired,
+//   filterContact: PropTypes.func.isRequired,
 // };
 
 export default Filter
